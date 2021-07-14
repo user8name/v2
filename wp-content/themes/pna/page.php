@@ -43,31 +43,37 @@ add_filter('custom_page_txt_baner', 'custom_page_txt_baner', 10, 1);
 
 get_header();
 ?>
-    <div class="nomain-banner">
-        <img src="<?php echo get_template_directory_uri();?>/images/service-banner.jpg" alt="about-banner">
 
-        <div class="nomain-banner-mess">
-            <h2><?php  echo  the_title();?></h2>
+    <section class="banner_inpage services_bg"
+             style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/servicesbg.jpg);">
+        <div class="banner-table">
+            <div class="banner-table-cell">
+                <div class="auto-container">
+                    <h1><?php the_title(); ?></h1>
+                    <ul class="bread-crumb clearfix">
+                        <li><a href="<?php home_url(); ?>">Home</a></li>
+                        <li><?php the_title(); ?></li>
+                    </ul>
+                </div>
+            </div>
         </div>
-    </div>
-    <ul class="breadcrumb container">
-        <li><a href="<?php home_url();?>" class="fa fa-home">&nbsp;Home</a></li>
-        <li><a href="">&nbsp;<?php  echo  the_title();?></a></li>
-    </ul>
+    </section>
+
     <div class="container services-container index-iconbg index-services-iconbg">
         <div class="container-box">
             <div class="left-container">
-<!--                <div class="side-box">-->
-<!--                    <div class="side-content">-->
-<!--                        --><?php //get_template_part('/modules/left-service')?>
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="side-box">-->
-<!--                    <div class="side-headline">Online Inquiry</div>-->
-<!--                    <div class="inquirybox">-->
-<!--                        --><?php //get_template_part('/modules/inquiry-form')?>
-<!--                    </div>-->
-<!--                </div>-->
+                <div class="side-box">
+                    <div class="side-content">
+
+                        <?php get_template_part('/modules/left-service')?>
+                    </div>
+                </div>
+                <div class="side-box">
+                    <div class="side-headline">Online Inquiry</div>
+                    <div class="inquirybox">
+                        <?php get_template_part('/modules/inquiry-form')?>
+                    </div>
+                </div>
             </div>
             <div class="right-container">
                 <div class="row service-tit">

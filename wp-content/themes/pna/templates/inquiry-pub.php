@@ -16,7 +16,7 @@ $name = trim(array_key_exists('fullname',$_REQUEST) ?$_REQUEST['fullname'] :'');
 $phone = trim(array_key_exists('phone',$_REQUEST) ?$_REQUEST['phone'] : '');
 $email = trim(array_key_exists('email',$_REQUEST) ?$_REQUEST['email'] : '');
 $services = trim(array_key_exists('services',$_REQUEST) ?$_REQUEST['services'] : '');
-$description = trim(array_key_exists('description',$_REQUEST) ? $_REQUEST['description'] : '');
+$description = trim(array_key_exists('services',$_REQUEST) ? $_REQUEST['description'] : '');
 
 
 

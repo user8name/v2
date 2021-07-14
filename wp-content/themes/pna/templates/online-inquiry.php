@@ -34,17 +34,20 @@ function custom_page_txt_baner($bannerText){
 add_filter('custom_page_txt_baner','custom_page_txt_baner',10,1);
 
 get_header();?>
-    <div class="nomain-banner">
-        <img src="<?php echo get_template_directory_uri();?>/images/service-banner.jpg" alt="about-banner">
 
-        <div class="nomain-banner-mess">
-            <h2><?php  echo  the_title();?></h2>
+    <section class="banner_inpage services_bg" style="background-image: url(<?php echo get_template_directory_uri();?>/images/inquirybg.jpg);" >
+        <div class="banner-table">
+            <div class="banner-table-cell">
+                <div class="auto-container">
+                    <h1>Online Inquiry</h1>
+                    <ul class="bread-crumb clearfix">
+                        <li><a href="<?php home_url();?>">Home</a></li> <li>Online Inquiry</li>                    </ul>
+                </div>
+            </div>
         </div>
-    </div>
-    <ul class="breadcrumb container">
-        <li><a href="<?php home_url();?>" class="fa fa-home">&nbsp;Home</a></li>
-        <li><a href="">&nbsp;<?php  echo  the_title();?></a></li>
-    </ul>
+    </section>
+
+
     <div class="container services-container index-iconbg">
         <div class="container-box">
             <h2 class="h2-box-center" style="margin-bottom: 15px;">Online Inquiry</h2>
@@ -55,6 +58,13 @@ get_header();?>
                     <?php get_template_part('/modules/inquiry-form')?>
                 </div>
             </div>
+            <div class="container-right">
+                <div class="contact-information">
+                    <h4>Don't Hesitate to contact us for any kind of information</h4>
+                    <?php get_template_part('/modules/right-contact-us');?>
+                </div>
+            </div>
+
         </div>
     </div>
 <?php get_footer()?>

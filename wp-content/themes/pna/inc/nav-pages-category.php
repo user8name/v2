@@ -472,7 +472,7 @@ class Custom_Walker_Category extends Walker_Category{
         }
 
         $indent  = str_repeat( "\t", $depth );
-        $output .= "$indent<ul style='display: none;'>\n";
+        $output .= "$indent<ul class='sub-menu'>\n";
     }
 
     public function start_el( &$output, $category, $depth = 0, $args = array(), $id = 0 ) {
@@ -545,7 +545,8 @@ class Custom_Walker_Category extends Walker_Category{
         if ( 'list' == $args['style'] ) {
             $output     .= "\t<li";
             $css_classes = array(
-                ''
+                'cat-item',
+                'cat-item-' . $category->term_id,
             );
 
             if ( ! empty( $args['current_category'] ) ) {
@@ -590,7 +591,7 @@ class Custom_Walker_Category extends Walker_Category{
             $css_classes = $css_classes ? ' class="' . esc_attr( $css_classes ) . '"' : '';
             $a_after='';
             if($args['walker']->has_children===true){
-                $link.='<span class="fa fa-angle-down rotate_angle"></span>';
+                $link.='<span class="arrow afinve1"></span>';
             }
             $output .= $css_classes;
             $output .= ">$link\n";
@@ -665,7 +666,7 @@ function wp_list_categories_c( $args = '' ) {
 
     $output = '';
     if ( $r['title_li'] && 'list' == $r['style'] && ( ! empty( $categories ) || ! $r['hide_title_if_empty'] ) ) {
-        $output = '<h3 class="' . esc_attr( $r['class'] ) . '">' . $r['title_li'] . '</h2><ul class="product-navi">';
+        $output = '<h2 class="' . esc_attr( $r['class'] ) . '">' . $r['title_li'] . '</h2><ul class="navmenu"><li class="open"><ul class="sub-menu" style="display: block;">';
 
     }
     if ( empty( $categories ) ) {
@@ -706,7 +707,7 @@ function wp_list_categories_c( $args = '' ) {
 
             $posts_page = esc_url( $posts_page );
             if ( 'list' == $r['style'] ) {
-                $output .= "<li><a href='$posts_page'>$show_option_all</a></li>";
+                $output .= "<li class='cat-item-all'><a href='$posts_page'>$show_option_all</a></li>";
             } else {
                 $output .= "<a href='$posts_page'>$show_option_all</a>";
             }
@@ -728,7 +729,7 @@ function wp_list_categories_c( $args = '' ) {
     }
 
     if ( $r['title_li'] && 'list' == $r['style'] && ( ! empty( $categories ) || ! $r['hide_title_if_empty'] ) ) {
-        $output .= '</ul>';
+        $output .= '</ul></li></ul>';
     }
 
     /**
