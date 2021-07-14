@@ -11,7 +11,7 @@ if (empty($s)) {
     die;
 }
 
-$ty=1;
+$ty=2;
 if(isset($_GET['ty']) && $_GET['ty']=='2'){
     $ty=2;
 }
@@ -26,19 +26,10 @@ add_filter('custom_page_title_baner','custom_page_title_baner',10,1);
 get_header();
 ?>
 <!--serach 的banner-->
-    <section class="banner_inpage services_bg" style="background-image: url(<?php echo  get_template_directory_uri();?>/images/servicesbg.jpg);" >
-        <div class="banner-table">
-            <div class="banner-table-cell">
-                <div class="auto-container">
-                    <h1>Search Results for: <?php  echo  get_search_query();?></h1>
-                    <ul class="bread-crumb clearfix">
-                        <li><a href="<?php home_url();?>">Home</a></li> <li>Search Results</li>                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
+    <ul class="breadcrumb container">
+        <li><a href="<?php home_url();?>" class="fa fa-home">&nbsp;Home</a></li>
+        <li><a href="">&nbsp;<?php  echo  the_title();?></a></li>
+    </ul>
     <div class="container services-container index-iconbg index-services-iconbg">
         <div class="container-box">
             <div class="row service-tit">
@@ -128,76 +119,8 @@ get_header();
                             (<span id="xload-he2" class="xload-tel" data-file="<?php echo get_template_directory_uri();?>/_noindex/ajax/786a0b4a39efab23" data-scroll="false"></span><script>$(function () { $("#xload-he2").xload(); });</script><noscript><a class="email-info" href="mailto:info@bioglyco.com">info@bioglyco.com</a></noscript>) to personally match your needs
                                                                                                                                                                                                                                                                                                                                                   with the most appropriate product.</p>
                     <?php endif; ?>
-                <?php else: ?>
-                    <?php
-
-                    if (have_posts()) :
-                        /* Start the Loop */
-                        while (have_posts()) : the_post();
-                            $s = trim(get_search_query()) ? trim(get_search_query()) : 0;
-                            $title = get_the_title();
-                            $post_content = strip_tags(get_the_content());
-                            $postion = stripos($post_content, $s);
-                            if ($postion !== false) {
-                                $start = ($postion > 50) ? $postion - 50 : 0;
-                                $content = mb_strimwidth($post_content, $start, 200, '...');
-                            } else {
-                                //                    continue;
-                                $content = mb_strimwidth(strip_tags(apply_filters('the_content', $post_content)), 0, 200, "...");
-                            }
-
-                            if ($s) {
-                                $title = preg_replace('/(' . $s . ')/iu', '<span style="color: red;">\0</span>', $title);
-                                $content = preg_replace('/(' . $s . ')/iu', '<span style="color: red;">\0</span>', $content);
-                            }
-                            ?>
-                            <div class="post-holder">
-                                <div class="post-content">
-                                    <h3>• <a href="<?php the_permalink(); ?>"><?php echo $title; ?></a></h3>
-                                    <p>
-                                        <?php echo $content; ?>
-                                    </p>
-                                </div>
-                            </div>
-                        <?php
-
-                        endwhile; // End of the loop.
-
-                        the_posts_pagination(array());
-
-                    else : ?>
-
-                        <br>
-                        <h3>Search Results</h3>
-                        <p>Sorry that we did not find a match to your query. Please refine your search using the
-                            following instructions:</p>
-                        <p>1. In the search box, enter only accession number such as NM_001200, or gene symbol, such as
-                            BMP2, or protein name, like Bone morphogenetic protein 2 precursor.</p>
-                        <p>2. Do not include product type descriptions, such as clone, antibody, or shRNA, <i>etc</i>.
-                        </p>
-                        <p>3. Do not include species in search.</p>
-                        <p>4. When one key word does not return any result, try the following options:</p>
-                        <p>&nbsp;&nbsp;&nbsp;&nbsp;B. Try both full and abbreviated gene names, <i>e.g.</i>, relaxin 3
-                            vs. RLN3</p>
-                        <p>&nbsp;&nbsp;&nbsp;&nbsp;C. Remove space or dash (-) in your search terms, like IL2 for
-                            IL-2.</p>
-                        <p>Alternatively, our Customer Care and Technology team is standing by email
-                            (<span id="xload-he1" class="xload-tel" data-file="<?php echo get_template_directory_uri();?>/_noindex/ajax/786a0b4a39efab23" data-scroll="false"></span><script>$(function () { $("#xload-he1").xload(); });</script><noscript><a class="email-info" href="mailto:info@bioglyco.com">info@bioglyco.com</a></noscript>) to personally match your needs
-                                                                                                                                                                                                                                                                                                                                                  with the most appropriate product.</p>
-
-                    <?php
-                    endif;
-
-                    ?>
                 <?php endif; ?>
             </div>
-            <div class="container-right">
-                <div class="contact-information">
-                    <h4>Don't Hesitate to contact us for any kind of information</h4>
-                    <?php get_template_part('/modules/right-contact-us');?>
-                </div>
-            </div>
-
         </div>
     </div>
 

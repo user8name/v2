@@ -16,30 +16,30 @@
     });
 </script>
 
-<form class="inquiry-form" action="<?php echo home_url();?>/pub.html">
+<form id="form-inquiry" class="inquiry-form" autocomplete="off" method="post"  action="<?php echo home_url();?>/pub.html">
     <div class="row-layout">
         <div>
             <label>*Name:</label>
-            <input type="text" placeholder="Name:">
+            <input type="text" name="fullname" class="validate[required]" placeholder="Name:">
         </div>
         <div>
             <label>*E-mail:</label>
-            <input type="text" placeholder="E-mail:">
+            <input type="text" name="email" class="validate[required,custom[email]]"  placeholder="E-mail:">
         </div>
     </div>
     <div class="row-layout">
         <div>
             <label>*Phone:</label>
-            <input type="text" placeholder="Phone:">
+            <input type="text" name="phone" class="validate[required]" placeholder="Phone:">
         </div>
         <div>
             <label>*Services Interested:</label>
-            <input type="text" placeholder="Services Interested:">
+            <input type="text" name="services" value="<?php echo apply_filters('custom-inquiry-title','');?>" class="validate[required]" placeholder="Services Interested:">
         </div>
     </div>
     <div>
         <label>Project Description:</label>
-        <textarea rows="4"  placeholder="Project Description:"></textarea>
+        <textarea rows="4" name="description" placeholder="Project Description:"></textarea>
     </div>
 
     <div class="row-layout" style="justify-content: flex-start;align-items: flex-end;">

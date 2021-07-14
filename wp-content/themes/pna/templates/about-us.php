@@ -28,56 +28,48 @@ add_filter('custom_page_txt_baner','custom_page_txt_baner',10,1);
 
 get_header();
 ?>
+    <div class="nomain-banner">
+        <img src="<?php echo get_template_directory_uri();?>/images/about-banner.jpg" alt="about-banner">
 
-<section class="banner_inpage about_bg" style="background-image: url(<?php echo  get_template_directory_uri();?>/images/aboutbg.jpg);" >
-    <div class="banner-table">
-        <div class="banner-table-cell">
-            <div class="auto-container">
-                <h1><?php  echo  the_title();?></h1>
-                <ul class="bread-crumb clearfix">
-                    <li><a href="<?php home_url();?>">Home</a></li> <li><?php  echo  the_title();?></li>                    </ul>
-            </div>
+        <div class="nomain-banner-mess">
+            <h2><?php  echo  the_title();?></h2>
         </div>
     </div>
-</section>
-<div class="container greybg index-iconbg index-services-iconbg aboutbox">
-    <div class="container-box index-container">
-        <div class="row index-about" style="margin: 0">
-            <div class="col-lg-6 col-md-6 col-sm-6">
-                <div class="about-show-box">
-                    <h2 class="h2-box text-left">About Us</h2>
-                    <p>CD BioSciences is a sub-brand of CD BioSciences. We offer a full range of glycobiology-related products, analysis, custom synthesis, and design to advance your glycobiology research. We have provided professional and reliable scientific research assistance to customers from all over the world and received a lot of appreciation.</p>
-                    <p>Quality and efficiency are our criteria to evaluate ourselves. Our experienced scientists provide quality services using a large number of advanced instruments. We do not subcontract services in order to guarantee high-quality standards.</p>
-                </div>
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-6 col-lg-img">
-                <div class="index-about-box about-1">
-                    <img src="<?php echo get_template_directory_uri();?>/images/about-1.jpg"/>
-                    <div class="index-about-box1"></div>
-                    <div class="index-about-box2"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+    <ul class="breadcrumb container">
+        <li><a href="<?php home_url();?>" class="fa fa-home">&nbsp;Home</a></li>
+        <li><a href="">&nbsp;<?php  echo  the_title();?></a></li>
+    </ul>
+    <div class="about container">
 
-<div class="container index-iconbg aboutbox-1">
-    <div class="container-box index-container">
-        <div class="row index-about" style="margin: 0">
-            <div class="col-lg-6 col-md-6 col-sm-6 col-lg-img">
-                <div class="index-about-box about-2">
-                    <img src="<?php echo get_template_directory_uri();?>/images/about-2.jpg"/>
-                    <div class="index-about-box1"></div>
-                    <div class="index-about-box2"></div>
-                </div>
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-6">
-                <div class="about-show-box">
-                    <h2 class="h2-box text-left">Why Choose Us</h2>
-                    <p>With innovative perspectives on the design and analysis of glycobiology and other studies, CD BioSciences's unparalleled expertise will help reduce client’s time and cost for the drug development process. To accelerate this process, we believe customization, sharing accessible resources, and a team of different backgrounds will be the key.</p>
-                </div>
+        <div class="nomain-about row-layout">
+            <img src="<?php echo get_template_directory_uri();?>/images/About-Us-Figure-1.jpg" class="left" alt="Our Story">
+            <div>
+                <h3>Our Story</h3>
+                <p>CD BioSciences is a leading customer-focused biotechnology company. We are dedicated to providing high-quality products, comprehensive services, and tailored solutions to support and facilitate life sciences and pharmaceutical research and development. CD BioSciences is fully committed to helping our customers around the world solve any problems encountered in their projects and accelerate their journey to success.
+                </p>
             </div>
         </div>
+        <div class="nomain-about row-layout">
+            <div class="left">
+                <h3>What We Do</h3>
+                <p>Kinases and phosphatases play a crucial role in biological functions. They control nearly every cellular process and are involved in a wide variety
+                    of pathological conditions. With years of accumulated experience, CD BioSciences has built a powerful scientific team and a fully integrated platform
+                    for kinase/phosphatase biology to provide one-stop services and customizable solutions to fully meet specific requirements of our customers.
+                </p>
+            </div>
+            <img src="<?php echo get_template_directory_uri();?>/images/About-Us-Figure-2.jpg" alt="What We Do">
+
+        </div>
+        <div class="aboutmodule2">
+            <h3>Why Choose Us</h3>
+            <div>
+                <img src="<?php echo get_template_directory_uri();?>/images/About-Us-Figure-3.png" alt="Why Choose Us" style="width:50%;">
+            </div>
+        </div>
+
     </div>
-</div>
+    <div class="indexschoose">
+        <p>Are you ready to get started?</p>
+        <a class="btn-normal" href="contact-us.html">LET’S GO</a>
+    </div>
 <?php echo get_footer()?>

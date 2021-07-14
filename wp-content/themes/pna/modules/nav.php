@@ -16,8 +16,7 @@ wp_nav_menu( array(
     'menu_class'   => 'navigation_title row-layout',
     'echo'  => true,
     //添加了一个搜索按钮
-    'items_wrap'  => '<ul id="%1$s" class="%2$s">%3$s 
-<li class="switch-btn"><a href="javascript:void(0)"><span class="icon fa fa-search"></span></a></li> 
+    'items_wrap'  => '<ul id="%1$s" class="%2$s">%3$s
 </ul>',
     //如何包装列表
     'walker' => new Header_Menu_Walker() ,
