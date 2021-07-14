@@ -37,7 +37,7 @@ get_header();
     </div>
 </div>
 <ul class="breadcrumb container">
-    <li><a href="<?php home_url();?>" class="fa fa-home">&nbsp;Home</a></li>
+    <li><a href="<?php echo  home_url(); ?>" class="fa fa-home">&nbsp;Home</a></li>
     <li><a href="">&nbsp;<?php  echo  the_title();?></a></li>
 </ul>
 <div class="contact container">
@@ -64,41 +64,7 @@ get_header();
     <h3 style="color:rgba(134,80,175,1)">Get In Touch</h3>
     <p>Please fill out the quick form and we will be in touch with lightening speed.
     </p>
-    <form class="inquiry-form">
-        <div class="row-layout">
-            <div>
-                <label>*Name:</label>
-                <input type="text" placeholder="Name:">
-            </div>
-            <div>
-                <label>*E-mail:</label>
-                <input type="text" placeholder="E-mail:">
-            </div>
-        </div>
-        <div class="row-layout">
-            <div>
-                <label>*Phone:</label>
-                <input type="text" placeholder="Phone:">
-            </div>
-            <div>
-                <label>*Services Interested:</label>
-                <input type="text" placeholder="Services Interested:">
-            </div>
-        </div>
-        <div>
-            <label>Project Description:</label>
-            <textarea rows="4"  placeholder="Project Description:"></textarea>
-        </div>
-
-        <div class="row-layout" style="justify-content: flex-start;align-items: flex-end;">
-            <div>
-                <label>*Verification Code:</label>
-                <input type="text" class="validate[required,ajax[ajaxCaptcha]]" name="code" size="15" placeholder="Verification Code">
-            </div>
-            <img src="<?php home_url();?>/?captcha=1&r=927837190" style="width:120px;height:34px;vertical-align:middle;cursor:pointer;" onclick="javascript: this.src = '<?php home_url();?>/?captcha=1&r=' + Math.random()" alt="Verification code" title="Click refresh">
-        </div>
-        <button type="submit" class="circle-btn">SEND</button>
-    </form>
+    <?php get_template_part('/modules/inquiry-form');?>
 
 </div>
 <div class="contactmap">

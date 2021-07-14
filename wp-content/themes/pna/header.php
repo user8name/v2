@@ -33,56 +33,6 @@
         </a>
         <div class="mobile-nav mobile-move">
             <?php get_template_part('/modules/nav');?>
-
-<!--            <ul class="navigation_title row-layout">-->
-<!--                <li>-->
-<!--                    <a href="">Home</a>-->
-<!--                </li>-->
-<!--                <li>-->
-<!--                    <a href="">Products</a>-->
-<!--                </li>-->
-<!--                <li>-->
-<!--                    <a href="">Services</a>-->
-<!--                    <div class="navigation_Solutions" style="display: none;">-->
-<!--                        <div class="navigation_content">-->
-<!--                            <ul class="navi_cont_chtitle">-->
-<!--                                <li ><a href="" >Protein Drugs Monitoring</a>-->
-<!--                                </li>-->
-<!--                                <li><a href="">Peptides Drugs Monitoring</a>-->
-<!--                                    <ul>-->
-<!--                                        <li><a href="">Anticoagulation</a></li>-->
-<!--                                        <li><a href="">Diabetes Mellitus</a></li>-->
-<!--                                    </ul>-->
-<!--                                </li>-->
-<!--                                <li><a href="">Therapeutic mAb Drugs Monitoring</a>-->
-<!--                                </li>-->
-<!--                            </ul>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </li>-->
-<!--                <li>-->
-<!--                    <a href="">Solutions</a>-->
-<!--                </li>-->
-<!--                <li>-->
-<!--                    <a href="">Platforms</a>-->
-<!--                </li>-->
-<!--                <li>-->
-<!--                    <a href="">Applications</a>-->
-<!--                </li>-->
-<!--                <li>-->
-<!--                    <a href="">Company</a>-->
-<!--                    <div class="navigation_Solutions" style="display: none;">-->
-<!--                        <div class="navigation_content">-->
-<!--                            <ul class="navi_cont_chtitle">-->
-<!--                                <li ><a href="" >About Us</a>-->
-<!--                                </li>-->
-<!--                                <li><a href="">Contact Us</a>-->
-<!--                                </li>-->
-<!--                            </ul>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </li>-->
-<!--            </ul>-->
         </div>
         <div class="header-search">
 

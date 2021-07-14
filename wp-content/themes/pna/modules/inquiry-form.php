@@ -16,37 +16,38 @@
     });
 </script>
 
-<form id="form-inquiry" name="form-inquiry" autocomplete="off" class="inquiry_form" method="post" action="<?php home_url();?>/pub.html">
-    <ul class="row">
-        <li class="col-md-6">
-            <label>* Name:</label>
-            <input type="text" name="fullname" class="validate[required]" placeholder="Name">
-        </li>
-        <li class="col-md-6">
-            <label>* Phone:</label>
-            <input type="text" name="phone" class="validate[required]" placeholder="Phone">
-        </li>
-        <li class="col-md-6">
-            <label>* Email:</label>
-            <input type="text" name="email" class="validate[required,custom[email]]" placeholder="Email">
-        </li>
-        <li class="col-md-6">
-            <label>* Products or Services of Interest:</label>
-            <input type="text" name="services" class="validate[required]" value="<?php echo apply_filters('custom-inquiry-title','');?>" placeholder="Products or Services of Interest">
-        </li>
-        <li class="col-md-12">
-            <label>Project Description:</label>
-            <textarea name="description" cols="40" rows="6" placeholder="Project Description"></textarea>
-        </li>
-        <li class="col-md-6 verification-code">
-            <label>* Verification Code:</label>
+<form class="inquiry-form" action="<?php echo home_url();?>/pub.html">
+    <div class="row-layout">
+        <div>
+            <label>*Name:</label>
+            <input type="text" placeholder="Name:">
+        </div>
+        <div>
+            <label>*E-mail:</label>
+            <input type="text" placeholder="E-mail:">
+        </div>
+    </div>
+    <div class="row-layout">
+        <div>
+            <label>*Phone:</label>
+            <input type="text" placeholder="Phone:">
+        </div>
+        <div>
+            <label>*Services Interested:</label>
+            <input type="text" placeholder="Services Interested:">
+        </div>
+    </div>
+    <div>
+        <label>Project Description:</label>
+        <textarea rows="4"  placeholder="Project Description:"></textarea>
+    </div>
+
+    <div class="row-layout" style="justify-content: flex-start;align-items: flex-end;">
+        <div>
+            <label>*Verification Code:</label>
             <input type="text" class="validate[required,ajax[ajaxCaptcha]]" name="code" size="15" placeholder="Verification Code">
-            <img src="<?php home_url();?>/?captcha=1&r=927837190" style="width:120px;height:34px;vertical-align:middle;cursor:pointer;" onclick="javascript: this.src = '<?php home_url();?>/?captcha=1&r=' + Math.random()" alt="Verification code" title="Click refresh">
-        </li>
-        <li class="col-md-12">
-            <input type="hidden" name="act" value="send">
-            <button class="submit" type="submit">Submit</button>
-        </li>
-        <div class="clear"></div>
-    </ul>
-</form> 
+        </div>
+        <img src="<?php home_url();?>/?captcha=1&r=927837190" style="width:120px;height:34px;vertical-align:middle;cursor:pointer;" onclick="javascript: this.src = '<?php home_url();?>/?captcha=1&r=' + Math.random()" alt="Verification code" title="Click refresh">
+    </div>
+    <button type="submit" class="circle-btn">SEND</button>
+</form>
