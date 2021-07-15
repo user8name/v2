@@ -911,7 +911,7 @@
 .fa-angle-up:before {
   content: "\f106";
 }
-.fa-angle-down:before {
+.<?php echo get_template_directory_uri();?>/:before {
   content: "\f107";
 }
 .fa-desktop:before {
