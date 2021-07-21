@@ -46,7 +46,6 @@
             <?php get_template_part('/modules/nav');?>
         </div>
         <div class="header-search">
-
             <span class="fa fa-search search-show"></span>
             <span class="fa fa-times search-close"></span>
             <form class="search-platform" action="<?php echo home_url();?>" method="get" style="display:none">

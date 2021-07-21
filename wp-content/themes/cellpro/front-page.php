@@ -1,6 +1,5 @@
 <?php
 
-//网站SEO
 function custom_get_canonical_url1($url){
     return  '<link rel="canonical" href="' . home_url() . '" />' . "\n";
 }

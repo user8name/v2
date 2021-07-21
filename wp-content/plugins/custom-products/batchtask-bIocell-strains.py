@@ -39,8 +39,8 @@ def insertdb(dic, jsontxt, db, dics):
     cas=db.escape_string(cas)
 
     size=''
-    if 'Size/Quantity' in dic:
-        size=str(dic["Size/Quantity"])
+    if 'Size' in dic:
+        size=str(dic["Size"])
     size=db.escape_string(size)
 
 
@@ -101,8 +101,8 @@ def updatedb(dic, jsontxt, db, dics):
     cas=db.escape_string(cas)
 
     size=''
-    if 'Size/Quantity' in dic:
-        size=str(dic["Size/Quantity"])
+    if 'Size' in dic:
+        size=str(dic["Size"])
     size=db.escape_string(size)
 
     cid=0
@@ -154,8 +154,8 @@ def dotask(infile, outfile):
     title = sh.row_values(0)
 
 
-    db = pymysql.connect(host="localhost",user="root",port=3306,passwd="root",db="cdb")
-    #db = pymysql.connect(host="cddbmysql.c8qakfd9b1ln.us-west-1.rds.amazonaws.com",user="nbv2",port=3306,passwd="rQD3V8WlTvXM4Mra",db="nb-v2")
+#     db = pymysql.connect(host="localhost",user="root",port=3306,passwd="root",db="cdb")
+    db = pymysql.connect(host="cddbmysql.c8qakfd9b1ln.us-west-1.rds.amazonaws.com",user="nbv2",port=3306,passwd="rQD3V8WlTvXM4Mra",db="nb-v2")
     db.set_charset('utf8')
 
     sql = 'SELECT cat FROM `wp_products`'
@@ -218,8 +218,8 @@ def sanitize_title(title):
 
 
 def main(argv):
-    inputfile = r'D:\2\6-7591.xlsx'
-    outputfile = r'D:\2\2.xls'
+    inputfile = r'D:\3\1.xlsx'
+    outputfile = r'D:\2\2.xlsx'
     try:
         opts, args = getopt.getopt(argv, "hi:o:", ["ifile=", "ofile="])
     except getopt.GetoptError:

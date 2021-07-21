@@ -131,7 +131,7 @@ get_header();
             <?php
 
             global $wpdb;
-            $page = $_REQUEST["page"];
+            $page = $_REQUEST["page"]??1;
             if ($page == null) {
                 $page = 1;
             }
