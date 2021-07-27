@@ -1,1 +1,0 @@
-PHPExcel是php编程语言的类，PHPExcel是一个用来读写Excel2007(OpenXML)文件的PHP库，允许你写入和读出不同的电子表格文件格式，有需要的赶快下载吧！
