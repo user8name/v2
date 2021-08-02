@@ -25,6 +25,17 @@ add_filter('custom_page_title_baner','custom_page_title_baner',10,1);
 
 get_header();
 ?>
+<!--serach banner-->
+<!--<div class="nomain-banner">-->
+<!--    <img src="--><?php //echo get_template_directory_uri();?><!--/images/service-banner.jpg" alt="about-banner">-->
+<!---->
+<!--    <div class="nomain-banner-mess">-->
+<!--        <h2>--><?php //the_title();?><!--</h2>-->
+<!--    </div>-->
+<!--</div>-->
+<!--    <ul class="breadcrumb container">-->
+<!--        --><?php //get_breadcrumbs()?>
+<!--    </ul>-->
 <div class="nomain-banner">
     <img src="<?php echo get_template_directory_uri();?>/images/service-banner.jpg" alt="about-banner">
 

@@ -208,14 +208,15 @@ add_filter('custom_page_txt_baner','custom_page_txt_baner',10,1);
 get_header();?>
     <div class="nomain-banner">
         <img src="<?php echo get_template_directory_uri();?>/images/service-banner.jpg" alt="about-banner">
+
         <div class="nomain-banner-mess">
-            <h2>Online Inquiry</h2>
+            <h2><?php the_title();?></h2>
+            <ul class="breadcrumb container">
+                <li><a href="<?php echo home_url();?>" class="fa fa-home">&nbsp;Home</a></li>
+                <li><a href="">&nbsp;Online Inquiry</a></li>
+            </ul>
         </div>
     </div>
-    <ul class="breadcrumb container">
-        <li><a href="<?php echo home_url();?>" class="fa fa-home">&nbsp;Home</a></li>
-        <li><a href="">&nbsp;Online Inquiry</a></li>
-    </ul>
     <div class="nomain-content container ">
             <div class="row">
                 <div class="col-md-12">
