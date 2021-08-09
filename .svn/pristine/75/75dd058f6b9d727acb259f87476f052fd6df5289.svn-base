@@ -25,13 +25,9 @@ add_filter('custom_page_title_baner', 'custom_page_title_baner', 10, 1);
 function banener_img($banner_img)
 {
     $img = get_post_meta(get_the_ID(), 'bannerImg', true);
-    $imgs = get_stylesheet_directory().$img;
-    if(file_exists($imgs)) {
-        $banner_img = get_template_directory_uri().$img;
-    } else {
-        $banner_img = get_template_directory_uri().'/images/service-banner.jpg';
+    if ($img) {
+        $banner_img = $img;
     }
-
     return $banner_img;
 }
 
@@ -49,7 +45,7 @@ get_header();
 ?>
 
     <section class="banner_inpage services_bg"
-             style="background-image: url(<?php echo apply_filters('custom_banner_img',get_template_directory_uri().'/images/servicesbg.jpg');?>);">
+             style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/servicesbg.jpg);">
         <div class="banner-table">
             <div class="banner-table-cell">
                 <div class="auto-container">
@@ -67,6 +63,7 @@ get_header();
             <div class="left-container">
                 <div class="side-box">
                     <div class="side-content">
+
                         <?php get_template_part('/modules/left-service')?>
                     </div>
                 </div>

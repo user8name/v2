@@ -221,7 +221,7 @@ get_header();?>
     <div class="bread-box">
         <div class="container">
             <ol class="breadcrumb">
-                <li><a href="<?php echo home_url();?>" ><span class="icon-home"></span>&nbsp;Home</a></li>
+                <li><a href="<?php echo home_url();?>" >&nbsp;Home</a></li>
                 <li class="active">&nbsp;Online Inquiry</li>
             </ol>
         </div>

@@ -209,24 +209,20 @@ function custom_page_txt_baner($bannerText){
 add_filter('custom_page_txt_baner','custom_page_txt_baner',10,1);
 
 get_header();?>
-    <div class="second-banner" style="background: url(<?php echo get_template_directory_uri();?>/images/services-bg.jpg) no-repeat  center;background-size: cover;">
-        <div class="container">
-            <div class="second-box" >
-                <div class="second-title">
-                    <h2>Online Inquiry</h2>
-                </div>
-            </div>
+    <div class="banner_inpage contact-bg">
+        <div class="auto-container">
+            <h2>Online Inquiry</h2>
         </div>
+
     </div>
     <div class="bread-box">
-        <div class="container">
-            <ol class="breadcrumb">
-                <li><a href="<?php echo home_url();?>" ><span class="icon-home"></span>&nbsp;Home</a></li>
-                <li class="active">&nbsp;Online Inquiry</li>
-            </ol>
+        <div class="index_container">
+            <ul class="bread-crumb ">
+                <li><a href="<?php echo home_url();?>">Home</a></li>  <li>Online Inquiry</li>
+            </ul>
         </div>
     </div>
-    <div class="nomain-content container ">
+    <div class="index_container">
             <div class="row">
                 <div class="col-md-12">
                     <div class="outer_layer_title">Thank you!</div>

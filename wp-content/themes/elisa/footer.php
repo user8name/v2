@@ -44,7 +44,6 @@
         </div>
     </div>
 </div>
-<?php //var_dump(wp_get_nav_menu_object("top"));?>
 <script type='text/javascript' src='<?php echo  get_template_directory_uri();?>/_noindex/ajax/jquery.base64.js?ver=1615952188'></script>
 <script type='text/javascript' src='<?php echo  get_template_directory_uri();?>/_noindex/ajax/jquery.xload.js?ver=1615952188'></script>
 <script type="text/javascript" src="<?php echo get_template_directory_uri();?>/js/respond.min.js?v=1.6"></script>

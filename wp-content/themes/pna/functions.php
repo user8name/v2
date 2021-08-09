@@ -101,7 +101,7 @@ function v1_scripts() {
 
 
 }
-add_action( 'wp_enqueue_scripts', 'v1_scripts' );
+//add_action( 'wp_enqueue_scripts', 'v1_scripts' );
 
 
 
